@@ -64,7 +64,7 @@ class BinaryPack(Pack):
                 if dino_matrix[y][x]:
                     vector = [x - origin_x, origin_y - y]
                     rot_vector = np.matmul(rotMat, vector)
-                    rotated[int(round(length//2 - rot_vector[1]))][int(round(length//2 + rot_vector[0]))] = 1
+                    rotated[int(length//2 - rot_vector[1])][int(length//2 + rot_vector[0])] = 1
 
         return rotated
 
