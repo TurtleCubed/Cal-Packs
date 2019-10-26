@@ -33,6 +33,7 @@ class BinaryPack(Pack):
                                 self.tray[y][x] = 1
                     x_inc = len(dino[0])
                     y_inc = len(dino)
+                    #self.dino_list.remove(dino)
                     break
             if fits:
                 recursivePack(x_start + x_inc, y_start, x_end, y_start + y_inc)
