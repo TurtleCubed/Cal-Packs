@@ -11,19 +11,11 @@ class ImageReader:
 
         array = [[0 for x in range(cols)] for y in range(rows)]
 
-        print(rows, cols)
-        print(len(array[0]), len(array))
-
         list_of_rows = file_text.split("\n")
 
         for i in range(len(list_of_rows)):
             for j in range(len(list_of_rows[i])):
                 array[i][j] = int(list_of_rows[i][j])
-
-        for i in range(len(array)):
-            for j in range(len(array[0])):
-                print(array[i][j], end='')
-            print('')
 
         return array
 

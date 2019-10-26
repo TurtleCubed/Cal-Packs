@@ -17,4 +17,9 @@ class Pack(ABC):
         return None
 
     def percent_full(self):
-        return 100 * self.fill / (len(self.tray) * len(self.tray[0]))
+        num_full = 0
+        for i in range(len(self.tray)):
+            for j in range(len(self.tray[0])):
+                if self.tray[i][j] == 1:
+                    num_full += 1
+        return 100 * num_full / (len(self.tray) * len(self.tray[0]))
