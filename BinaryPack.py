@@ -33,7 +33,7 @@ class BinaryPack(Pack):
                                 self.tray[y][x] = 1
                     x_inc = len(dino[0])
                     y_inc = len(dino)
-                    #self.dino_list.remove(dino)
+                    self.dino_list.append(self.dino_list.pop(self.dino_list.index(dino)))
                     break
             if fits:
                 recursivePack(x_start + x_inc, y_start, x_end, y_start + y_inc)
@@ -50,6 +50,7 @@ class BinaryPack(Pack):
 
     def rotate_dino(self, dino_matrix, angle):
 
+        angle = angle * pi/2
         length = int(sqrt((len(dino_matrix) ** 2 + len(dino_matrix[0]) ** 2)))
         rotated = [[0 for x in range(length)] for y in range(length)]
 
