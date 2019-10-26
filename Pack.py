@@ -10,7 +10,7 @@ class Pack(ABC):
         self.num_dinos = 0
 
     """
-    pack takes in the dimensions of the "tray" and the list of dinosaurs 
+    Returns a 2 dimensional array representing the packed tray
     """
     @abstractmethod
     def pack(self):
