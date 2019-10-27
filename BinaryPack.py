@@ -13,6 +13,8 @@ class BinaryPack(Pack):
         super().__init__(n, m, dino_list)
         for i in range(len(self.dino_list)):
             dino_list[i] = self.reduce_matrix(dino_list[i])
+        for j in range(len(self.dino_list) - 1, -1, -1):
+            dino_list.append(self.remove_edges(self.rotate_dino(self.dino_list[j], 90)))
         self.dino_list.sort(key=lambda x: len(x) * len(x[0]))
 
 
